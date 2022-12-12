@@ -17,6 +17,7 @@ import OtherProjectCard from './OtherProjectCard'
 import OtherProjects from './OtherProjects'
 import Section from './Section'
 import Text from './Text'
+import Activities from './Activities'
 
 export {
   A,
@@ -38,4 +39,5 @@ export {
   OtherProjects,
   Section,
   Text,
+  Activities,
 }

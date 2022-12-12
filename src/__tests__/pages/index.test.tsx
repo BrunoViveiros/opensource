@@ -3,8 +3,9 @@ import { render, screen } from '@test/components'
 import Home from '../../pages/index'
 
 describe('Home', () => {
-  const renderComponent = (props = { projects: [], otherProjects: [] }) =>
-    render(<Home {...props} />)
+  const renderComponent = (
+    props = { projects: [], otherProjects: [], activities: [] }
+  ) => render(<Home {...props} />)
 
   it('renders a heading', () => {
     renderComponent()
