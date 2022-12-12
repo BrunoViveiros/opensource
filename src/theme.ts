@@ -3,6 +3,8 @@ const colors = {
   white: '#ffffff',
   gray: {
     100: '#f7f8fc',
+    200: '#e2e8f0',
+    300: '#cbd5e1',
     600: '#515153',
   },
   blue: '#2e31a6',

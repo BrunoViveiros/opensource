@@ -12,16 +12,19 @@ import {
   Hero,
   Projects,
   OtherProjects,
+  Activities,
 } from '@/components'
 import { Project } from '@/domain/Project'
 import container from '@/container'
+import { Activity } from '@/domain/Activity'
 
 type HomeProps = {
   projects: Project[]
   otherProjects: Project[]
+  activities: Activity[]
 }
 
-const Home: NextPage<HomeProps> = ({ projects, otherProjects }) => {
+const Home: NextPage<HomeProps> = ({ projects, otherProjects, activities }) => {
   return (
     <>
       <Head>
@@ -41,6 +44,8 @@ const Home: NextPage<HomeProps> = ({ projects, otherProjects }) => {
 
         <OtherProjects projects={otherProjects} />
 
+        <Activities activities={activities} />
+
         <Careers />
       </Box>
 
@@ -52,14 +57,17 @@ const Home: NextPage<HomeProps> = ({ projects, otherProjects }) => {
 export const getServerSideProps: GetServerSideProps = async (): Promise<
   GetServerSidePropsResult<HomeProps>
 > => {
-  const { projectsRepository, otherProjectsRepository } = container
+  const { projectsRepository, otherProjectsRepository, activitiesRepository } =
+    container
   const projects = await projectsRepository.getProjects()
   const otherProjects = await otherProjectsRepository.getOtherProjects()
+  const activities = await activitiesRepository.getActivities()
 
   return {
     props: {
       projects,
       otherProjects,
+      activities,
     },
   }
 }
