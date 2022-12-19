@@ -4,7 +4,7 @@ const Careers = () => (
   <Section bg='blue'>
     <Container>
       <Heading color='white' fontSize={['7', '8', '9']} textAlign='center'>
-        We are hiring new talents.
+        We are hiring new talent.
       </Heading>
 
       <Flex justifyContent='center' mt='4'>
