@@ -16,7 +16,7 @@ const Link = styled.a`
 
 const Activities = ({ activities }: ActivitiesProps) => {
   return (
-    <Section bg='gray.100' pb={['5', '6', '7']}>
+    <Section bg='gray.100' pb={['5', '6']}>
       <Container>
         <Heading color='blue' fontSize={['5', '6', '7']} mb={['4', '4', '5']}>
           Recent Activities
