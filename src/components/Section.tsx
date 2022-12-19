@@ -5,7 +5,7 @@ const Section = styled(Box)``
 
 Section.defaultProps = {
   as: 'section',
-  py: ['5', '6'],
+  py: '5',
 }
 
 export default Section
