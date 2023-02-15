@@ -17,6 +17,7 @@ import {
 import { Project } from '@/domain/Project'
 import container from '@/container'
 import { Activity } from '@/domain/Activity'
+import { Banner } from '@/components/Banner'
 
 type HomeProps = {
   projects: Project[]
@@ -47,6 +48,8 @@ const Home: NextPage<HomeProps> = ({ projects, otherProjects, activities }) => {
         <Activities activities={activities} />
 
         <Careers />
+
+        <Banner />
       </Box>
 
       <Footer />
